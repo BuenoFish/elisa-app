@@ -33,7 +33,7 @@ def img_to_base64(path):
     with open(path, "rb") as f:
         return base64.b64encode(f.read()).decode()
 
-img_b64 = img_to_base64("frauenkirche.jpg")
+img_b64 = img_to_base64("frauenkirche_flach.jpg")
 
 st.markdown(f"""
 <div class="header-box" style="display:flex; align-items:stretch; justify-content:space-between; padding:0; overflow:hidden; border-radius:4px; margin:0;">
