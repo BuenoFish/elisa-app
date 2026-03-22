@@ -133,7 +133,6 @@ st.markdown("## 1 · Plattendesign festlegen")
 st.markdown("""
 <div class="info-box">
 Klicke auf eine Zelle und wähle aus dem Dropdown: <b>blank</b>, <b>S1–S8</b>, <b>Probe</b> oder <b>leer</b>.
-Ziehen über mehrere Zellen funktioniert ebenfalls.
 </div>
 """, unsafe_allow_html=True)
 
