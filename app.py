@@ -29,8 +29,6 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-import base64
-
 def img_to_base64(path):
     with open(path, "rb") as f:
         return base64.b64encode(f.read()).decode()
@@ -38,14 +36,19 @@ def img_to_base64(path):
 img_b64 = img_to_base64("frauenkirche.jpg")
 
 st.markdown(f"""
-<div class="header-box" style="display:flex; align-items:center; justify-content:space-between;">
-    <div>
-        <h1>🧪 ELISA 4PL Auswertung</h1>
-        <p>Gebaut an der Elbe · Gefittet mit 4 Parametern · Kein Medizinprodukt</p>
+<div class="header-box" style="display:flex; align-items:center; justify-content:space-between; padding:0; overflow:hidden; border-radius:4px;">
+    <div style="padding:2rem 2.5rem; flex:1;">
+        <h1 style="font-size:1.8rem; margin:0 0 0.3rem 0; color:#f5f4f0;">🧪 ELISA 4PL Auswertung</h1>
+        <p style="margin:0; color:#aaa; font-size:0.9rem; font-family:'IBM Plex Mono',monospace;">
+            Gebaut an der Elbe · Gefittet mit 4 Parametern · Kein Medizinprodukt
+        </p>
     </div>
-    <img src="data:image/jpeg;base64,{img_b64}"
-         style="width:80px; height:80px; border-radius:50%;
-                object-fit:cover; border:3px solid #555;">
+    <div style="width:350px; height:100%; min-height:110px; flex-shrink:0; position:relative;">
+        <img src="data:image/jpeg;base64,{img_b64}"
+             style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
+        <div style="position:absolute; top:0; left:0; width:100%; height:100%;
+            background: linear-gradient(to right, #1a1a1a 0%, transparent 60%);"></div>
+    </div>
 </div>
 """, unsafe_allow_html=True)
 
