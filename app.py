@@ -40,7 +40,7 @@ st.markdown(f"""
     <div style="padding:2rem 2.5rem; flex:1;">
         <h1 style="font-size:1.8rem; margin:0 0 0.3rem 0; color:#f5f4f0;">🧪 ELISA 4PL Auswertung</h1>
         <p style="margin:0; color:#aaa; font-size:0.9rem; font-family:'IBM Plex Mono',monospace;">
-            Gebaut an der Elbe · Gefittet mit 4 Parametern · Kein Medizinprodukt
+            Gebaut an der Elbe · Kein Medizinprodukt
         </p>
     </div>
     <div style="width:350px; flex-shrink:0; position:relative; line-height:0;">
