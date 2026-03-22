@@ -31,7 +31,7 @@ st.markdown("""
 st.markdown("""
 <div class="header-box">
     <h1>🧪 ELISA 4PL Auswertung</h1>
-    <p>96-Well-Platte · Visueller Platteneditor · Blank-Subtraktion · 4PL-Fit</p>
+    <p>Gebaut an der Elbe · 96-Well-Platte · Visueller Platteneditor · Blank-Subtraktion · 4PL-Fit</p>
 </div>
 """, unsafe_allow_html=True)
 
