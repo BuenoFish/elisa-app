@@ -228,9 +228,9 @@ if not std_map:
 
 c1, c2, c3, c4 = st.columns(4)
 with c1:
-    conc_unit = st.text_input("Einheit", value="ng/mL")
+    conc_unit = st.text_input("Einheit", value="pg/mL")
 with c2:
-    conc_top = st.number_input("Höchste Konzentration (S1)", value=25.0, min_value=0.0001, format="%.4f")
+    conc_top = st.number_input("Höchste Konzentration (S1)", value=400.0, min_value=0.0001, format="%.4f")
 with c3:
     use_serial = st.radio("Eingabe", ["Serielle Verdünnung", "Manuell"], horizontal=True)
 with c4:
@@ -240,7 +240,7 @@ with c4:
         dil_factor = None
 
 n_s = len(std_keys_sorted)
-defaults = [25.0, 12.5, 6.25, 3.125, 1.5625, 0.78125, 0.390625, 0.195]
+defaults = [400.0, 200, 100, 50, 25, 12.5, 6.2, 3.1]
 
 if use_serial == "Serielle Verdünnung":
     conc_dict = {sk: conc_top / (dil_factor ** i) for i, sk in enumerate(std_keys_sorted)}
