@@ -4,6 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 from io import BytesIO
+import base64
 
 st.set_page_config(page_title="ELISA 4PL Auswertung", page_icon="🧪", layout="wide")
 
@@ -28,10 +29,23 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown("""
-<div class="header-box">
-    <h1>🧪 ELISA 4PL Auswertung</h1>
-    <p>Gebaut an der Elbe · 96-Well-Platte · Visueller Platteneditor · Blank-Subtraktion · 4PL-Fit</p>
+import base64
+
+def img_to_base64(path):
+    with open(path, "rb") as f:
+        return base64.b64encode(f.read()).decode()
+
+img_b64 = img_to_base64("frauenkirche.jpg")
+
+st.markdown(f"""
+<div class="header-box" style="display:flex; align-items:center; justify-content:space-between;">
+    <div>
+        <h1>🧪 ELISA 4PL Auswertung</h1>
+        <p>Gebaut an der Elbe · Gefittet mit 4 Parametern · Kein Medizinprodukt</p>
+    </div>
+    <img src="data:image/jpeg;base64,{img_b64}"
+         style="width:80px; height:80px; border-radius:50%;
+                object-fit:cover; border:3px solid #555;">
 </div>
 """, unsafe_allow_html=True)
 
