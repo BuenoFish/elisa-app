@@ -47,7 +47,7 @@ st.markdown(f"""
         <img src="data:image/jpeg;base64,{img_b64}"
              style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
         <div style="position:absolute; top:0; left:0; width:100%; height:100%;
-            background: linear-gradient(to right, #1a1a1a 0%, transparent 30%);"></div>
+            background: linear-gradient(to right, #1a1a1a 0%, transparent 60%);"></div>
     </div>
 </div>
 """, unsafe_allow_html=True)
