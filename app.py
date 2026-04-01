@@ -189,7 +189,7 @@ st.session_state.plate_df = edited_df
 # Farbige Vorschau
 st.markdown("**Vorschau:**")
 st.dataframe(
-    edited_df.style.applymap(colorize),
+    edited_df.style.map(colorize),
     use_container_width=True,
     hide_index=False,
 )
